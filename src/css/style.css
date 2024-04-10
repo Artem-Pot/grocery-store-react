@@ -368,6 +368,7 @@ body {
   }
 }
 
+/*----------------------Слайдер------------------------*/
 .slider {
   background: url("../images/slider/background.png");
   background-color: #fff;
@@ -690,6 +691,7 @@ body {
   border: none;
 }
 
+/*------------------------спец предложения---------------------------*/
 .special-offers {
   margin-top: 80px;
 }
@@ -802,6 +804,7 @@ body {
   padding-top: 8px;
 }
 
+/*-------------------Наши магазины------------------------*/
 .our-stores {
   margin-top: 120px;
 }
@@ -834,6 +837,7 @@ body {
   display: none;
 }
 
+/*--------------Товары на странице----------*/
 .articles {
   margin-top: 120px;
 }
@@ -936,6 +940,7 @@ body {
   color: #fff;
 }
 
+/*------------------футер------------*/
 .footer {
   margin-top: 80px;
   background-color: #F9F4E2;
@@ -1084,4 +1089,4 @@ body {
 }
 .footer__telephone:hover {
   text-decoration: underline;
-}/*# sourceMappingURL=style.css.map */
+}
