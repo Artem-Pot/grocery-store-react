@@ -16,7 +16,6 @@ function Slider() {
                 <div className="swiper-container">
                   <Swiper
                     loop={true}
-                    grabCursor={true}
                     speed={1000}
                     autoplay={{delay:5000, disableOnInteraction:true}}
                     >
