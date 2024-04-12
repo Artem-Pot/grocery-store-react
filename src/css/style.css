@@ -880,6 +880,8 @@ body {
 /*--------------Товары на странице----------*/
 .articles {
   margin-top: 120px;
+
+
 }
 .articles__box-articles {
   display: grid;
@@ -911,6 +913,9 @@ body {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   background-color: #FF6633;
+  max-height: 600px;
+  height: 100%;
+  flex: 1 1 auto;
 }
 .articl:hover {
   -webkit-box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
@@ -939,6 +944,13 @@ body {
           flex-direction: column;
   gap: 10px;
   background-color: #5a9e49;
+
+}
+
+.articl__interior {
+  background-color: cornflowerblue;
+  height: 100%;
+
 }
 .articl__date {
   font-size: 12px;
@@ -958,8 +970,7 @@ body {
   }
 }
 .articl__text {
-  max-height: 110px;
-  overflow: hidden;
+  
 
 }
 @media (max-width: 768px) {
@@ -977,6 +988,7 @@ body {
   border-radius: 4px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+
 }
 .button__articl:hover {
   background-color: #70C05B;
