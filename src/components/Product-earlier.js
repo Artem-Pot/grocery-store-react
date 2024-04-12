@@ -1,23 +1,21 @@
 import React from 'react';
-import Image from './Image';
-import imgProduct from '../images/product/product-1.png';
 
-function ProductStock() {
+function ProductStock(props) {
     return (
         <div className="product">
             <div className="product__box-images">
                 <a className="product__link" href="#">
-                    <Image image={imgProduct} className="product__images" alt="Изображение продукта"/>
+                    <img src={props.imgProduct} className="product__images" alt="Изображение продукта"/>
                 </a>
                 <button className="product__button-favorites" type="button"></button>
             </div>
             <div className="product__box-price">
                 <div className="product__price">
-                    <span className="product__price-cart">44,50 ₽</span>
+                    <span className="product__price-cart">{props.productPriceCart} ₽</span>
                 </div>
             </div>
             <p className="product__name">
-                <a className="product__link" href="#">Г/Ц Блинчики с мясом вес, Россия</a>
+                <a className="product__link" href="#">{props.productName}</a>
             </p>
             <div className="product__box-rating">
                 <button className="product__star product__star_on" type="button"></button>

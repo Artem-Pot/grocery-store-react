@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from './components/Image';
-import heart from './images/header/heart.svg';
-import order from './images/header/order.svg';
-import shoppingCart from './images/header/shopping-cart.svg';
 import avatar from './images/header/avatar.png';
+import { ReactComponent as Heart } from "./images/header/heart.svg";
+import { ReactComponent as Order} from "./images/header/order.svg";
+import { ReactComponent as ShoppingCart} from "./images/header/shopping-cart.svg";
+import { ReactComponent as ArrowDown} from "./images/header/arrow-down.svg";
 
-class Header extends React.Component {
-    render() {
+function Header(){
         return (
             <header className="header">
               <div className="container">
@@ -43,21 +43,21 @@ class Header extends React.Component {
 
                       <a href="#">
                         <div className="header__wrapper-icons">
-                            <Image image={heart} className="header__img-icons"/>
+                            <Heart />
                             <span className="header__title">Избранное</span>
                         </div>
                       </a>
 
                     <a href="#">
                       <div className="header__wrapper-icons">
-                          <Image image={order} className="header__img-icons"/>
+                          <Order />
                           <span className="header__title">Заказы</span>
                         </div>
                     </a>
 
                     <a href="#">
                       <div className="header__wrapper-icons">
-                            <Image image={shoppingCart} className="header__img-icons"/>
+                      <ShoppingCart />
                             <span className="header__title">Корзина</span>
                             <span className="header__number-orders">12</span>
                       </div>
@@ -67,13 +67,14 @@ class Header extends React.Component {
                   <div className="header__box-profile">
                     <Image image={avatar} className="header__img-ava" alt="Аватар"/>
                     <span className="header__name-user">Алексей</span>
-                    <button className="button__arrow"></button>
+                    <button>
+                      <ArrowDown />
+                    </button>
                   </div>
                 </div>
               </div>
           </header>
         )
     }
-}
 
 export default Header;

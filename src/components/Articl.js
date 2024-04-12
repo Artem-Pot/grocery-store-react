@@ -1,6 +1,4 @@
 import React from 'react';
-// import Image from './Image';
-// import imgArticles from '../images/articles/articl-3.jpeg';
 
 function Articl(props) {
     return (
@@ -19,6 +17,3 @@ function Articl(props) {
 }
 
 export default Articl;
-
-
-// <Image image={props.imgArticles} className="articl__img" alt="Изображение статьи"/>
