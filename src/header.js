@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from "react";
 import Image from './components/Image';
 import avatar from './images/header/avatar.png';
 import { ReactComponent as Heart } from "./images/header/heart.svg";
@@ -7,34 +7,76 @@ import { ReactComponent as ShoppingCart} from "./images/header/shopping-cart.svg
 import { ReactComponent as ArrowDown} from "./images/header/arrow-down.svg";
 
 function Header(){
+    const [isActive, setIsActive] = useState(false);
+
+      const container = useRef();
+      const [dropdownState, setDropdownState] = useState({ open: false });
+     
+      const handleDropdownClick = () =>
+      setDropdownState({ open: !dropdownState.open });
+     
+      const handleClickOutside = (e) => {
+      if (container.current && !container.current.contains(e.target)) {
+      setDropdownState({ open: false });
+      }
+      };
+     
+      useEffect(() => {
+      document.addEventListener("mousedown", handleClickOutside);
+    
+      return () => document.removeEventListener("mousedown", handleClickOutside);
+      }, []);
+
         return (
             <header className="header">
               <div className="container">
                 <div className="header__wrapper"><a className="header__link-img" href="index.html">
                     <div className="header__img-logo"></div></a>
-                    <div className="header__menu">
-                      <div className="button__menu"> <span>Каталог</span></div>
-                      <ul className="header__list">
-                        <li className="header__items">
-                          <a className="header__link-product" href="#">Молоко, сыр, яйцо</a>
-                        </li>
-                        <li className="header__items">
-                          <a className="header__link-product" href="#">Хлеб</a>
-                        </li>
-                        <li className="header__items">
-                          <a className="header__link-product" href="#">Фрукты и овощи</a>
-                        </li>
-                        <li className="header__items">
-                          <a className="header__link-product" href="#">Напитки</a>
-                        </li>
-                        <li className="header__items">
-                          <a className="header__link-product" href="#">Кондитерские изделия</a>
-                        </li>
-                        <li className="header__items">
-                          <a className="header__link-product" href="#">Чай, кофе</a>
-                        </li>
-                      </ul>
-                  </div>
+                    <div className="header__menu" ref={container}>
+                      <div className="button__menu" onClick={handleDropdownClick}>
+                        <a href="#">Каталог</a></div>
+
+                        {dropdownState.open && (
+                        <ul className="header__list">
+                          <li className="header__items">
+                            <a href="#">Молоко, сыр, яйцо</a>
+                          </li>
+                          <li className="header__items">
+                            <a href="#">Хлеб</a>
+                          </li>
+                          <li className="header__items">
+                            <a href="#">Замороженные продукты</a>
+                          </li>
+                          <li className="header__items">
+                            <a href="#">Напитки</a>
+                          </li>
+                          <li className="header__items">
+                            <a href="#">Кондитерские изделия</a>
+                          </li>
+                          <li className="header__items">
+                            <a href="#">Чай, кофе</a>
+                          </li>
+                          <li className="header__items">
+                            <a href="#">Бакалея</a>
+                          </li>
+                          <li className="header__items">
+                            <a href="#">Здоровое питание</a>
+                          </li>
+                          <li className="header__items">
+                            <a href="#">Зоотовары</a>
+                          </li>
+                          <li className="header__items">
+                            <a href="#">Детское питание</a>
+                          </li>
+                          <li className="header__items">
+                            <a href="#">Мясо, птица, колбаса</a>
+                          </li>
+                          <li className="header__items">
+                            <a href="#">Непродовольственные товары</a>
+                          </li>
+                        </ul>
+                      )}
+                    </div>
                   <div className="header__box-search">
                     <input className="header__search" type="text" placeholder="Найти товар" />
                     <button className="button__search"></button>
