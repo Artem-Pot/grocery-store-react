@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from './components/Image';
-import avatar from './images/header/avatar.png';
+import avatar from './images/header/profile.svg';
 import { ReactComponent as Heart } from "./images/header/heart.svg";
 import { ReactComponent as Order} from "./images/header/order.svg";
 import { ReactComponent as ShoppingCart} from "./images/header/shopping-cart.svg";
@@ -8,24 +8,28 @@ import { ReactComponent as ArrowDown} from "./images/header/arrow-down.svg";
 
 function Header(){
     const [isActive, setIsActive] = useState(false);
-
       const container = useRef();
+      const container2 = useRef();
       const [dropdownState, setDropdownState] = useState({ open: false });
-     
+      const [dropdownStateUser, setDropdownStateUser] = useState({ open: false });
+
       const handleDropdownClick = () =>
       setDropdownState({ open: !dropdownState.open });
+
+      const UserDropdownClick = () =>
+      setDropdownStateUser({ open: !dropdownStateUser.open });
      
-      const handleClickOutside = (e) => {
-      if (container.current && !container.current.contains(e.target)) {
-      setDropdownState({ open: false });
+      const ClickOutsid = (e) => {
+        if (container.current && !container.current.contains(e.target)) {
+          setDropdownState({ open: false }); }
+
+        if (container2.current && !container2.current.contains(e.target)) {
+          setDropdownStateUser({ open: false }); }   
       }
-      };
-     
-      useEffect(() => {
-      document.addEventListener("mousedown", handleClickOutside);
-    
-      return () => document.removeEventListener("mousedown", handleClickOutside);
-      }, []);
+
+      useEffect(() => {document.addEventListener("mousedown", ClickOutsid);
+
+      return () => document.removeEventListener("mousedown", ClickOutsid);}, []);
 
         return (
             <header className="header">
@@ -106,12 +110,31 @@ function Header(){
                     </a>
                         
                   </div>
-                  <div className="header__box-profile">
+                  <div className="header__box-profile" ref={container2} onClick={UserDropdownClick}>
                     <Image image={avatar} className="header__img-ava" alt="Аватар"/>
-                    <span className="header__name-user">Алексей</span>
+                    <span className="header__name-user">Артём</span>
                     <button>
                       <ArrowDown />
                     </button>
+                    {dropdownStateUser.open && (
+                    <ul className="header__list-profile">
+                      <li className="header__items_profile">
+                        <a href="#">Мой кабинет</a>
+                      </li>
+                      <li className="header__items_profile">
+                        <a href="#">Личные данные</a>
+                      </li>
+                      <li className="header__items_profile">
+                        <a href="#">Мои заказы</a>
+                      </li>
+                      <li className="header__items_profile">
+                        <a href="#">Избранное</a>
+                      </li>
+                      <li className="header__items_profile">
+                        <a href="#">Выход</a>
+                      </li>
+                    </ul>
+                    )}
                   </div>
                 </div>
               </div>

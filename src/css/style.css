@@ -219,7 +219,6 @@ body {
   background-color: #fff;
   position: absolute;
   z-index: 2;
-  padding: 8px;
   margin-top: 5px;
   border: 1px solid #FF6633;
   border-radius: 4px;
@@ -227,12 +226,15 @@ body {
 
 .header__items a{
   color: #414141;
-  line-height: 2;
+  font-weight: 500;
+  display: block;
+  padding: 8px;
 }
 
 .header__items a:hover{
-  color: #FF6633;
+  color: #fff;
   transition: all 0.3s ease;
+  background-color: #a5a1a1;
 }
 
 .header__box-search {
@@ -377,6 +379,7 @@ body {
           justify-content: center;
   gap: 10px;
   transition: all 0.3s ease;
+  position: relative;
 }
 .header__box-profile:hover {
   cursor: pointer;
@@ -397,6 +400,8 @@ body {
 .header__img-ava {
   max-width: 40px;
   max-height: 40px;
+  background-color: #414141;
+  border-radius: 50%;
 }
 .header__name-user {
   font-size: 16px;
@@ -423,6 +428,32 @@ body {
     display: none;
   }
 }
+
+.header__list-profile {
+  width: 150px;
+  background-color: #fff;
+  position: absolute;
+  top: 60px;
+  z-index: 2;
+  padding: 8px;
+  border: 1px solid #FF6633;
+  border-radius: 4px;
+}
+
+.header__items_profile {
+
+}
+
+.header__items_profile a{
+  color: #414141;
+  line-height: 2;
+}
+
+.header__items_profile a:hover{
+  color: #FF6633;
+  transition: all 0.3s ease;
+}
+
 
 /*----------------------Слайдер------------------------*/
 .slider {
