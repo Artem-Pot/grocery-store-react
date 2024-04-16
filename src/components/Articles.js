@@ -1,8 +1,8 @@
 import React from 'react';
-import Articl from './components/Articl';
-import imgArticles1 from './images/articles/articl-1.jpeg'
-import imgArticles2 from './images/articles/articl-2.jpeg'
-import imgArticles3 from './images/articles/articl-3.jpeg'
+import Articl from './Articl';
+import imgArticles1 from '../images/articles/articl-1.jpeg'
+import imgArticles2 from '../images/articles/articl-2.jpeg'
+import imgArticles3 from '../images/articles/articl-3.jpeg'
 
 function Articles() {
     return (

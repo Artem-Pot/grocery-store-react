@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Header from './Header';
-import Slider from './Slider';
-import Stock from './Stock';
-import NewItems from './New-items';
-import Earlier from './Earlier';
-import Special from './Special';
-import OurStores from './Our-stores';
-import Articles from './Articles';
-import Footer from './Footer';
+import Header from './components/Header';
+import Slider from './components/Slider';
+import Stock from './components/Stock';
+import NewItems from './components/New-items';
+import Earlier from './components/Earlier';
+import Special from './components/Special';
+import OurStores from './components/Our-stores';
+import Articles from './components/Articles';
+import Footer from './components/Footer';
 
 import './css/style.css';
 

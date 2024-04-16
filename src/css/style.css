@@ -521,6 +521,7 @@ body {
 }
 
 /*-----------акции, новинки, покупали раньше------------------*/
+
 .product-list__wrapper {
   height: 443px;
 }
@@ -622,6 +623,10 @@ body {
   overflow: hidden;
   background-color: #fff;
   gap: 8px;
+}
+
+.product:hover {
+  box-shadow: 4px 8px 16px 0px rgba(255, 102, 51, 0.2);
 }
 @media (max-width: 960px) {
   .product {

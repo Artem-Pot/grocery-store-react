@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import Image from './components/Image';
-import avatar from './images/header/profile.svg';
-import { ReactComponent as Heart } from "./images/header/heart.svg";
-import { ReactComponent as Order} from "./images/header/order.svg";
-import { ReactComponent as ShoppingCart} from "./images/header/shopping-cart.svg";
-import { ReactComponent as ArrowDown} from "./images/header/arrow-down.svg";
+import Image from './Image';
+import avatar from '../images/header/profile.svg';
+import { ReactComponent as Heart } from "../images/header/heart.svg";
+import { ReactComponent as Order} from "../images/header/order.svg";
+import { ReactComponent as ShoppingCart} from "../images/header/shopping-cart.svg";
+import { ReactComponent as ArrowDown} from "../images/header/arrow-down.svg";
 
 function Header(){
     const [isActive, setIsActive] = useState(false);

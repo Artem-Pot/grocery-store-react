@@ -37,3 +37,5 @@ function ProductStock(props) {
 }
                         
 export default ProductStock;
+
+// <a className="product__link" href="#">{props.productName}</a>
