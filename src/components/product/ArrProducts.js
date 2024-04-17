@@ -14,7 +14,7 @@ let ArrProducts = [
     {
         id: 1,
         imgProduct: imgProdict1,
-        productSales:'-50%',
+        productSales:'-30%',
         productPriceCart:'44,50',
         productNoCart:'48,00',
         productName: 'Г/Ц Блинчики с мясом вес, Россия',
@@ -23,7 +23,7 @@ let ArrProducts = [
     {
         id: 2,
         imgProduct: imgProdict2,
-        productSales:'-50%',
+        productSales:'-20%',
         productPriceCart:'54,50',
         productNoCart:'60,00',
         productName: 'Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное 1л',
@@ -32,7 +32,7 @@ let ArrProducts = [
     {
         id: 3,
         imgProduct: imgProdict3,
-        productSales:'-50%',
+        productSales:'-10%',
         productPriceCart:'77,50',
         productNoCart:'82,00',
         productName: 'Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскано',
@@ -50,7 +50,7 @@ let ArrProducts = [
     {
         id: 5,
         imgProduct: imgProdict5,
-        productSales:'-50%',
+        productSales:'-30%',
         productPriceCart:'560,50',
         productNoCart:'599,00',
         productName: 'Колбаса сырокопченая 0,5 кг',
@@ -59,7 +59,7 @@ let ArrProducts = [
     {
         id: 6,
         imgProduct: imgProdict6,
-        productSales:'-50%',
+        productSales:'-15%',
         productPriceCart:'77,99',
         productNoCart:'90',
         productName: 'Колбаса «ДЕСНА-ПОЛЕСЬЕ 0.4 кг»',

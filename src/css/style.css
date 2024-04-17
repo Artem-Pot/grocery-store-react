@@ -294,6 +294,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 24px;
+  position: relative;
 }
 @media (max-width: 768px) {
   .header__box-icons {
@@ -365,6 +366,21 @@ body {
   padding: 1px 5px;
   border-radius: 4px;
   font-size: 8px;
+}
+
+.header__list-items {
+  position: absolute;
+  background-color: #fff;
+  width: 400px;
+  z-index: 2;
+  top: 60px;
+  left: 0px;
+  border: 1px solid #FF6633;
+  padding: 8px 8px 8px 20px;
+}
+
+.header__list-items li{
+  line-height: 2;
 }
 
 .header__box-profile {

@@ -10,26 +10,48 @@ function Header(){
     const [isActive, setIsActive] = useState(false);
       const container = useRef();
       const container2 = useRef();
-      const [dropdownState, setDropdownState] = useState({ open: false });
-      const [dropdownStateUser, setDropdownStateUser] = useState({ open: false });
+      const container3 = useRef();
+      const [dropdownState, setDropdownState] = useState({ open: false }); // выпадающее меню каталога
+      const [dropdownStateUser, setDropdownStateUser] = useState({ open: false }); //выпающее меню профиля
+      const [dropDownCart, setdropDownCart] = useState({ open: false }); //выпадающее меню корзины
 
       const handleDropdownClick = () =>
       setDropdownState({ open: !dropdownState.open });
 
       const UserDropdownClick = () =>
       setDropdownStateUser({ open: !dropdownStateUser.open });
-     
+
+      const UserdropDownCart = () =>
+      setdropDownCart({ open: !dropDownCart.open });
+
+     //событие меню 
       const ClickOutsid = (e) => {
         if (container.current && !container.current.contains(e.target)) {
           setDropdownState({ open: false }); }
-
-        if (container2.current && !container2.current.contains(e.target)) {
-          setDropdownStateUser({ open: false }); }   
       }
 
-      useEffect(() => {document.addEventListener("mousedown", ClickOutsid);
+      const ClickOutsid2 = (e) => {
+        if (container2.current && !container2.current.contains(e.target)) {
+          setDropdownStateUser({ open: false }); }
+      }
 
-      return () => document.removeEventListener("mousedown", ClickOutsid);}, []);
+      const ClickOutsid3 = (e) => {
+        if (container3.current && !container3.current.contains(e.target)) {
+          setdropDownCart({ open: false }); }
+      }
+
+      //закрытие меню при клике вне меню
+      useEffect(() => {document.addEventListener("mousedown", ClickOutsid);
+        return () => document.removeEventListener("mousedown", ClickOutsid);}
+      );
+
+      useEffect(() => {document.addEventListener("mousedown", ClickOutsid2);
+      return () => document.removeEventListener("mousedown", ClickOutsid2);}
+    );
+
+      useEffect(() => {document.addEventListener("mouseout", ClickOutsid3);
+      return () => document.removeEventListener("mouseout", ClickOutsid3);}
+    );
 
         return (
             <header className="header">
@@ -102,11 +124,24 @@ function Header(){
                     </a>
 
                     <a href="#">
-                      <div className="header__wrapper-icons">
+                      <div className="header__wrapper-icons" ref={container3} onMouseOver={UserdropDownCart}>
                       <ShoppingCart />
                             <span className="header__title">Корзина</span>
                             <span className="header__number-orders">12</span>
                       </div>
+                      {dropDownCart.open && (
+                        <ol className='header__list-items'>
+                          <li >
+                            Товар 1 fqwfqwf  fqwfqwf
+                          </li>
+                          <li >
+                            Товар 2 fqwfqwfqw fqwfqwfqwf fqwfqwfqwfqwf
+                          </li> 
+                          <li>
+                            Товар 3 fqwfqwfqwf fqwfqwfqwf
+                          </li>
+                        </ol>
+                      )}
                     </a>
                         
                   </div>
@@ -143,3 +178,5 @@ function Header(){
     }
 
 export default Header;
+
+// onMouseEnter={UserdropDownCart}
