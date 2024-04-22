@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from './Image';
 import avatar from '../images/header/profile.svg';
+import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import Catalog from "./pages/Catalog";
+
 import { ReactComponent as Heart } from "../images/header/heart.svg";
 import { ReactComponent as Order} from "../images/header/order.svg";
 import { ReactComponent as ShoppingCart} from "../images/header/shopping-cart.svg";
@@ -56,11 +60,14 @@ function Header(){
         return (
             <header className="header">
               <div className="container">
-                <div className="header__wrapper"><a className="header__link-img" href="index.html">
-                    <div className="header__img-logo"></div></a>
+                <div className="header__wrapper">
+                    <Link to='/'>
+                      <div className="header__img-logo"></div>
+                    </Link>
                     <div className="header__menu" ref={container}>
-                      <div className="button__menu" onClick={handleDropdownClick}>
-                        <a href="#">Каталог</a></div>
+                      <div className="button__menu" onMouseOver={handleDropdownClick}>
+                          <Link to='/catalog'>Каталог</Link>
+                      </div>
 
                         {dropdownState.open && (
                         <ul className="header__list">
@@ -173,7 +180,9 @@ function Header(){
                   </div>
                 </div>
               </div>
+
           </header>
+
         )
     }
 
