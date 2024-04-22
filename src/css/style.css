@@ -204,13 +204,13 @@ body {
     height: 40px;
   }
 }
-.header .button__menu a {
+.header .button__menu span {
   font-size: 16px;
   color: #fff;
   padding-left: 50px;
 }
 @media (max-width: 768px) {
-  .header .button__menu a {
+  .header .button__menu span {
     display: none;
   }
 }
@@ -848,7 +848,7 @@ body {
   }
 }
 .special-offers__box_card {
-  background: url("../images/special-offers/card.png") no-repeat right 30px center;
+  background: url("../images/pages/home/special-offers/card.png") no-repeat right 30px center;
   background-color: #FCD5BA;
 }
 @media (max-width: 1150px) {
@@ -873,7 +873,7 @@ body {
   }
 }
 .special-offers__box_basket {
-  background: url("../images/special-offers/basket.png") no-repeat center center;
+  background: url("../images/pages/home/special-offers/basket.png") no-repeat center center;
   background-color: #E5FFDE;
 }
 @media (max-width: 1150px) {
@@ -1214,3 +1214,52 @@ body {
 .footer__telephone:hover {
   text-decoration: underline;
 }
+
+/*Страница каталога товаров*/
+.catalog {
+
+}
+
+.catalog__wrapper {
+
+
+}
+
+.catalog__navigation {
+
+}
+
+.catalog__box {
+
+}
+
+.catalog__category {
+  position: relative;
+  background-color: #FF6633;
+  display: grid;
+  gap: 40px 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 200px 200px 200px 200px;
+}
+
+.catalog__img {
+  z-index: 20;
+}
+
+.catalog__gradient {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: linear-gradient(180.00deg, rgba(112, 192, 91, 0),rgb(112, 192, 91) 82.813%);
+  width: 100%;
+  height: 100px;
+  z-index: 2;
+}
+
+.catalog__category span{
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+
+}
+

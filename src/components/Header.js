@@ -65,9 +65,11 @@ function Header(){
                       <div className="header__img-logo"></div>
                     </Link>
                     <div className="header__menu" ref={container}>
+                    <Link to='/catalog'>
                       <div className="button__menu" onMouseOver={handleDropdownClick}>
-                          <Link to='/catalog'>Каталог</Link>
+                          <span>Каталог</span>
                       </div>
+                      </Link>
 
                         {dropdownState.open && (
                         <ul className="header__list">
