@@ -1242,6 +1242,10 @@ body {
 }
 
 .catalog__link span{
+  color: #414141;
+}
+
+.catalog__link_activ span{
   color: #8F8F8F;
 }
 

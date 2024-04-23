@@ -30,9 +30,9 @@ const Catalog = () => {
             <div className="container">
                 <div className="catalog__wrapper">
                     <nav className="catalog__navigation">
-                        <Link to='/'>Главая</Link>
+                        <Link to='/' className="catalog__link"><span>Главая</span></Link>
                         <ArrowRight />
-                        <Link to='/catalog' className="catalog__link"><span>Каталог</span></Link>
+                        <Link to='/catalog' className="catalog__link catalog__link_activ"><span>Каталог</span></Link>
                     </nav>
                     <h2 className="title-h2">Каталог</h2>
                     <div className="catalog__box">
