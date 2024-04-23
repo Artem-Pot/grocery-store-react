@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from './Image';
-import imgSlide from '../images/slider/slide-1.png';
+import imgSlide from '../images/pages/home/slider/slide-1.png';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { register } from 'swiper/element/bundle';

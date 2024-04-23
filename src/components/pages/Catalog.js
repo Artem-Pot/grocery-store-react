@@ -29,105 +29,130 @@ const Catalog = () => {
         <section className="catalog">
             <div className="container">
                 <div className="catalog__wrapper">
-                    <nav className="catalog__navigation" class>
+                    <nav className="catalog__navigation">
                         <Link to='/'>Главая</Link>
                         <ArrowRight />
-                        <Link to='/catalog'>Каталог</Link>
+                        <Link to='/catalog' className="catalog__link"><span>Каталог</span></Link>
                     </nav>
                     <h2 className="title-h2">Каталог</h2>
                     <div className="catalog__box">
-                    
-                        <div className="catalog__category">
-                            <Image image={imgCategory1} className="catalog__img"/>
-                            <div className="catalog__gradient">
+                         
+                        <a href='#' className="catalog__category-link">
+                            <div className="catalog__category">
+                                <Image image={imgCategory1} className="catalog__img"/>
+                                <div className="catalog__gradient">
                                 <span>Молоко, сыр, яйцо</span>
+                                </div>
                             </div>
-
-                        </div>
-
-                        <div className="catalog__category">
-                            <Image image={imgCategory2} className="catalog__img"/>
-                            <div className="catalog__gradient">
-                                <span>Хлеб</span>
+                        </a>
+ 
+                        <a href='#' className="catalog__category-link">
+                            <div className="catalog__category">
+                                <Image image={imgCategory2} className="catalog__img"/>
+                                <div className="catalog__gradient">
+                                    <span>Хлеб</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="catalog__category">
-                            <Image image={imgCategory3} className="catalog__img"/>
-                            <div className="catalog__gradient">
-                                <span>Фрукты и овощи</span>
+                        <a href='#' className="catalog__category-link">
+                            <div className="catalog__category">
+                                <Image image={imgCategory3} className="catalog__img"/>
+                                <div className="catalog__gradient">
+                                    <span>Фрукты и овощи</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="catalog__category">
-                            <Image image={imgCategory4} className="catalog__img"/>
-                            <div className="catalog__gradient">
-                                <span>Замороженные продукты</span>
+                        <a href='#' className="catalog__category-link">
+                            <div className="catalog__category">
+                                <Image image={imgCategory4} className="catalog__img"/>
+                                <div className="catalog__gradient">
+                                    <span>Замороженные продукты</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="catalog__category">
-                            <Image image={imgCategory5} className="catalog__img"/>
-                            <div className="catalog__gradient">
-                                <span>Напитки</span>
+                        <a href='#' className="catalog__category-link">
+                            <div className="catalog__category">
+                                <Image image={imgCategory5} className="catalog__img"/>
+                                <div className="catalog__gradient">
+                                    <span>Напитки</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="catalog__category">
-                            <Image image={imgCategory6} className="catalog__img"/>
-                            <div className="catalog__gradient">
-                                <span>Кондитерские изделия</span>
+                        <a href='#' className="catalog__category-link">
+                            <div className="catalog__category">
+                                <Image image={imgCategory6} className="catalog__img"/>
+                                <div className="catalog__gradient">
+                                    <span>Кондитерские изделия</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="catalog__category">
-                            <Image image={imgCategory7} className="catalog__img"/>
-                            <div className="catalog__gradient">
-                                <span>Чай, кофе</span>
+                        <a href='#' className="catalog__category-link">
+                            <div className="catalog__category">
+                                <Image image={imgCategory7} className="catalog__img"/>
+                                <div className="catalog__gradient">
+                                    <span>Чай, кофе</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="catalog__category">
-                            <Image image={imgCategory8} className="catalog__img"/>
-                            <div className="catalog__gradient">
-                                <span>Бакалея</span>
+                        <a href='#' className="catalog__category-link">
+                            <div className="catalog__category">
+                                <Image image={imgCategory8} className="catalog__img"/>
+                                <div className="catalog__gradient">
+                                    <span>Бакалея</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="catalog__category">
-                            <Image image={imgCategory9} className="catalog__img"/>
-                            <div className="catalog__gradient">
-                                <span>Здоровое питание</span>
+                        <a href='#' className="catalog__category-link">
+                            <div className="catalog__category">
+                                <Image image={imgCategory9} className="catalog__img"/>
+                                <div className="catalog__gradient">
+                                    <span>Здоровое питание</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="catalog__category">
-                            <Image image={imgCategory10} className="catalog__img"/>
-                            <div className="catalog__gradient">
-                                <span>Зоотовары</span>
+                        <a href='#' className="catalog__category-link">
+                            <div className="catalog__category">
+                                <Image image={imgCategory10} className="catalog__img"/>
+                                <div className="catalog__gradient">
+                                    <span>Зоотовары</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="catalog__category">
-                            <Image image={imgCategory11} className="catalog__img"/>
-                            <div className="catalog__gradient">
-                                <span>Детское питание</span>
+                        <a href='#' className="catalog__category-link">
+                            <div className="catalog__category">
+                                <Image image={imgCategory11} className="catalog__img"/>
+                                <div className="catalog__gradient">
+                                    <span>Детское питание</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="catalog__category">
-                            <Image image={imgCategory12} className="catalog__img"/>
-                            <div className="catalog__gradient">
-                                <span>Мясо, птица, колбаса</span>
+                        <a href='#' className="catalog__category-link">
+                            <div className="catalog__category">
+                                <Image image={imgCategory12} className="catalog__img"/>
+                                <div className="catalog__gradient">
+                                    <span>Мясо, птица, колбаса</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
-                        <div className="catalog__category">
-                            <Image image={imgCategory13} className="catalog__img"/>
-                            <div className="catalog__gradient">
-                                <span>Непродовольственные товары</span>
+                        <a href='#' className="catalog__category-link">
+                            <div className="catalog__category">
+                                <Image image={imgCategory13} className="catalog__img"/>
+                                <div className="catalog__gradient">
+                                    <span>Прочие товары</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
 
                     </div>
                 </div>
