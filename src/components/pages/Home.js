@@ -1,4 +1,5 @@
 import React from "react";
+import ArrProducts from '../../components/product/ArrProducts';
 
 import Header from '../Header';
 import Slider from '../Slider';
@@ -10,20 +11,48 @@ import OurStores from '../Our-stores';
 import Articles from '../Articles';
 import Footer from '../Footer';
 
-const Home = () => {
-    return (
-    <div>
-        <Header />
-        <Slider />
-        <Stock />
-        <NewItems />
-        <Earlier />
-        <Special />
-        <OurStores />
-        <Articles />
-        <Footer />
-    </div>
-);
+import Test from '../Test';
+
+class Home extends React.Component {
+    constructor(props) {
+        super(props)
+        this.arr = {
+            ArrProducts
+        }
+    }
+    render() {
+        return (
+            <div>
+                <Header />
+                <Slider />
+                <Stock />
+                <Test ArrProducts={this.arr.ArrProducts}/>
+                <NewItems />
+                <Earlier />
+                <Special />
+                <OurStores />
+                <Articles />
+                <Footer />
+            </div>
+        );
+    }
 };
+
+
+// const Home = () => {
+//     return (
+//     <div>
+//         <Header />
+//         <Slider />
+//         <Stock />
+//         <NewItems />
+//         <Earlier />
+//         <Special />
+//         <OurStores />
+//         <Articles />
+//         <Footer />
+//     </div>
+// );
+// };
 
 export default Home;
