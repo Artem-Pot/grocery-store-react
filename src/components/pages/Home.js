@@ -11,8 +11,6 @@ import OurStores from '../Our-stores';
 import Articles from '../Articles';
 import Footer from '../Footer';
 
-import Test from '../Test';
-
 class Home extends React.Component {
     constructor(props) {
         super(props)
@@ -25,10 +23,9 @@ class Home extends React.Component {
             <div>
                 <Header />
                 <Slider />
-                <Stock />
-                <Test ArrProducts={this.arr.ArrProducts}/>
-                <NewItems />
-                <Earlier />
+                <Stock ArrProducts={this.arr.ArrProducts}/>
+                <NewItems ArrProducts={this.arr.ArrProducts}/>
+                <Earlier ArrProducts={this.arr.ArrProducts}/>
                 <Special />
                 <OurStores />
                 <Articles />
@@ -37,22 +34,5 @@ class Home extends React.Component {
         );
     }
 };
-
-
-// const Home = () => {
-//     return (
-//     <div>
-//         <Header />
-//         <Slider />
-//         <Stock />
-//         <NewItems />
-//         <Earlier />
-//         <Special />
-//         <OurStores />
-//         <Articles />
-//         <Footer />
-//     </div>
-// );
-// };
 
 export default Home;
