@@ -1225,7 +1225,6 @@ body {
 .catalog__wrapper {
   display: flex;
   flex-direction: column;
-
 }
 
 .catalog__navigation {
@@ -1276,18 +1275,31 @@ body {
 .catalog__box {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 40px;
   margin-top: 40px;
 }
 
 .catalog__category {
   position: relative;
+  max-width: 272px;
+}
 
+.catalog__category_span {
+  position: relative;
+  max-width: 584px;
+}
+
+@media (max-width: 613px) {
+  .catalog__category_span {
+    max-width: 272px;
+  }
 }
 
 .catalog__img {
   z-index: 1;
   width: auto;
+  object-fit:cover;
 }
 
 .catalog__gradient {

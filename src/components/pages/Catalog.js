@@ -37,122 +37,122 @@ const Catalog = () => {
                     <h2 className="title-h2">Каталог</h2>
                     <div className="catalog__box">
                          
-                        <a href='#' className="catalog__category-link">
-                            <div className="catalog__category">
+                        <Link to='/' className="catalog__category-link">
+                            <div className="catalog__category catalog__category_span">
                                 <Image image={imgCategory1} className="catalog__img"/>
                                 <div className="catalog__gradient">
                                 <span>Молоко, сыр, яйцо</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
  
-                        <a href='#' className="catalog__category-link">
+                        <Link to='/' className="catalog__category-link">
                             <div className="catalog__category">
                                 <Image image={imgCategory2} className="catalog__img"/>
                                 <div className="catalog__gradient">
                                     <span>Хлеб</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href='#' className="catalog__category-link">
+                        <Link to='/' className="catalog__category-link">
                             <div className="catalog__category">
                                 <Image image={imgCategory3} className="catalog__img"/>
                                 <div className="catalog__gradient">
                                     <span>Фрукты и овощи</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href='#' className="catalog__category-link">
+                        <Link to='/' className="catalog__category-link">
                             <div className="catalog__category">
                                 <Image image={imgCategory4} className="catalog__img"/>
                                 <div className="catalog__gradient">
                                     <span>Замороженные продукты</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href='#' className="catalog__category-link">
+                        <Link to='/' className="catalog__category-link">
                             <div className="catalog__category">
                                 <Image image={imgCategory5} className="catalog__img"/>
                                 <div className="catalog__gradient">
                                     <span>Напитки</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href='#' className="catalog__category-link">
+                        <Link to='/' className="catalog__category-link">
                             <div className="catalog__category">
                                 <Image image={imgCategory6} className="catalog__img"/>
                                 <div className="catalog__gradient">
                                     <span>Кондитерские изделия</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href='#' className="catalog__category-link">
+                        <Link to='/' className="catalog__category-link">
                             <div className="catalog__category">
                                 <Image image={imgCategory7} className="catalog__img"/>
                                 <div className="catalog__gradient">
                                     <span>Чай, кофе</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href='#' className="catalog__category-link">
+                        <Link to='/' className="catalog__category-link">
                             <div className="catalog__category">
                                 <Image image={imgCategory8} className="catalog__img"/>
                                 <div className="catalog__gradient">
                                     <span>Бакалея</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href='#' className="catalog__category-link">
+                        <Link to='/' className="catalog__category-link">
                             <div className="catalog__category">
                                 <Image image={imgCategory9} className="catalog__img"/>
                                 <div className="catalog__gradient">
                                     <span>Здоровое питание</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href='#' className="catalog__category-link">
-                            <div className="catalog__category">
+                        <Link to='/' className="catalog__category-link">
+                            <div className="catalog__category catalog__category_span">
                                 <Image image={imgCategory10} className="catalog__img"/>
                                 <div className="catalog__gradient">
                                     <span>Зоотовары</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href='#' className="catalog__category-link">
+                        <Link to='/' className="catalog__category-link">
+                            <div className="catalog__category catalog__category_span">
+                                <Image image={imgCategory12} className="catalog__img"/>
+                                <div className="catalog__gradient">
+                                    <span>Мясо, птица, колбаса</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        <Link to='/' className="catalog__category-link">
                             <div className="catalog__category">
                                 <Image image={imgCategory11} className="catalog__img"/>
                                 <div className="catalog__gradient">
                                     <span>Детское питание</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
-                        <a href='#' className="catalog__category-link">
-                            <div className="catalog__category">
-                                <Image image={imgCategory12} className="catalog__img"/>
-                                <div className="catalog__gradient">
-                                    <span>Мясо, птица, колбаса</span>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href='#' className="catalog__category-link">
+                        <Link to='/' className="catalog__category-link">
                             <div className="catalog__category">
                                 <Image image={imgCategory13} className="catalog__img"/>
                                 <div className="catalog__gradient">
                                     <span>Прочие товары</span>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
 
                     </div>
                 </div>
