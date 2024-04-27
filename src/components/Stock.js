@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
+import Product from './product/Product';
 
 class Stock extends Component {
     render() {
@@ -13,38 +14,9 @@ class Stock extends Component {
                         </div>
                         <div className="product-list__box">
 
-                        {this.props.ArrProducts.slice(0,4).map(el => ( // вывод 4 товаров на страницу
+                        {this.props.items.slice(0,4).map(el => ( // вывод 4 товаров на страницу
 
-                            <div className="product" key={el.id}>
-                                <div className="product__box-images">
-                                <Link to='/' className="product__link">
-                                    <img src={el.imgProduct} className="product__images" alt="Изображение продукта"/>
-                                </Link>
-                                    <button className="product__button-favorites" type="button"></button>
-                                    <span className="product__sales">{el.productSales}</span>
-                                </div>
-                                <div className="product__box-price">
-                                    <div className="product__price">
-                                        <span className="product__price-cart">{el.productPriceCart} ₽</span>
-                                        <span className="product__title">С картой</span>
-                                    </div>
-                                    <div className="product__price">
-                                        <span className="product__price-nocart">{el.productNoCart} ₽</span>
-                                        <span className="product__title">Обычная</span>
-                                    </div>
-                                </div>
-                                <p className="product__name">
-                                    <Link to='/' className="product__link">{el.productName}</Link>
-                                </p>
-                                <div className="product__box-rating">
-                                    <button className="product__star product__star_on" type="button"></button>
-                                    <button className="product__star product__star_on" type="button"></button>
-                                    <button className="product__star product__star_on" type="button"></button>
-                                    <button className="product__star product__star_on" type="button"></button>
-                                    <button className="product__star" type="button"></button>
-                                </div>
-                                <button className="product__button-buy" type="button">В корзину</button>
-                            </div>
+                            <Product key={el.id} item={el} onAdd={this.props.onAdd}/>
                         
                             ))}
                             
@@ -58,6 +30,7 @@ class Stock extends Component {
 }
 
 export default Stock;
+
 
 
 
