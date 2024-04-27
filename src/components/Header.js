@@ -4,14 +4,32 @@ import avatar from '../images/header/profile.svg';
 import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
+import Orders from "./product/Orders";
 
 import { ReactComponent as Heart } from "../images/header/heart.svg";
 import { ReactComponent as Order} from "../images/header/order.svg";
 import { ReactComponent as ShoppingCart} from "../images/header/shopping-cart.svg";
 import { ReactComponent as ArrowDown} from "../images/header/arrow-down.svg";
 
-function Header(){
+const showOrders = (props) => {
+  return <div>
+          {props.orders.map(el => (
+            <Orders key={el.id} item={el} />
+          ))}
+        </div>
+}
+
+const showNothing = () => {
+  return (
+    <div>
+      <h3>Корзина пуста</h3>
+    </div>
+  )
+}
+
+function Header(props){
     const [isActive, setIsActive] = useState(false);
+
       const container = useRef();
       const container2 = useRef();
       const container3 = useRef();
@@ -140,15 +158,7 @@ function Header(){
                       </div>
                       {dropDownCart.open && (
                         <ol className='header__list-items'>
-                          <li >
-                            Товар 1 fqwfqwf  fqwfqwf
-                          </li>
-                          <li >
-                            Товар 2 fqwfqwfqw fqwfqwfqwf fqwfqwfqwfqwf
-                          </li> 
-                          <li>
-                            Товар 3 fqwfqwfqwf fqwfqwfqwf
-                          </li>
+                          {props.orders.length > 0 ? showOrders(props) : showNothing()}
                         </ol>
                       )}
                     </a>
@@ -182,12 +192,9 @@ function Header(){
                   </div>
                 </div>
               </div>
-
           </header>
 
         )
     }
 
 export default Header;
-
-// onMouseEnter={UserdropDownCart}

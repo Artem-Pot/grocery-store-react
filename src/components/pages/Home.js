@@ -135,7 +135,7 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <Header />
+                <Header orders={this.state.orders}/>
                 <Slider />
                 <Stock items={this.state.items} onAdd={this.addToOrder}/>
 
@@ -148,12 +148,13 @@ class Home extends React.Component {
     }
 
     addToOrder(item) {
-        this.setState({orders: [...this.state.orders, item]}, () => {
-            console.log(this.state.orders);
-            
+        let isInArray = false;
+        this.state.orders.forEach(el => {
+            if (el.id === item.id) 
+            isInArray = true
         })
+        if(!isInArray) this.setState({orders: [...this.state.orders, item] })
     }
-
 };
 
 export default Home;

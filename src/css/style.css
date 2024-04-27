@@ -379,11 +379,12 @@ body {
   top: 60px;
   left: 0px;
   border: 1px solid #FF6633;
-  padding: 8px 8px 8px 20px;
+  padding: 6px;
 }
 
 .header__list-items li{
-  line-height: 2;
+  line-height: 18px;
+  margin-bottom: 10px;
 }
 
 .header__box-profile {
@@ -1318,4 +1319,31 @@ body {
   font-weight: 700;
   color: #fff;
   padding: 8px;
+}
+
+/*----Корзина покупок----*/
+.product__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.product__images_card {
+  width: 100px;
+  height: auto;
+}
+
+.product__name_card {
+  font-size: 14px;
+  display: block;
+  max-height: 50px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.product__price-cart_cart {
+  font-size: 10px;
+  width: 110px;
+  padding: 4px;
 }
