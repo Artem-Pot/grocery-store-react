@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
 
-//функция добавления товара в корзину
-const buyProduct = (id) => {
-    console.log('купил товар с id:' , id);
-}
 
 class  Earlier extends Component {
     render() {
@@ -43,7 +39,7 @@ class  Earlier extends Component {
                                 <button className="product__star product__star_on" type="button"></button>
                                 <button className="product__star" type="button"></button>
                             </div>
-                            <button className="product__button-buy" type="button" onClick={() => buyProduct(el.id)}>В корзину</button>
+                            <button className="product__button-buy" type="button">В корзину</button>
                         </div>
                     
                         ))}

@@ -15,17 +15,19 @@ class Home extends React.Component {
     constructor(props) {
         super(props)
         this.arr = {
+            orders : [],
             ArrProducts
         }
+        this.addToOrder = this.addToOrder.bind(this)
     }
     render() {
         return (
             <div>
                 <Header />
                 <Slider />
-                <Stock ArrProducts={this.arr.ArrProducts}/>
-                <NewItems ArrProducts={this.arr.ArrProducts}/>
-                <Earlier ArrProducts={this.arr.ArrProducts}/>
+                <Stock ArrProducts={this.arr.ArrProducts} onAdd={this.addToOrder}/>
+                <NewItems ArrProducts={this.arr.ArrProducts} onAdd={this.addToOrder}/>
+                <Earlier ArrProducts={this.arr.ArrProducts} onAdd={this.addToOrder}/>
                 <Special />
                 <OurStores />
                 <Articles />
@@ -33,6 +35,14 @@ class Home extends React.Component {
             </div>
         );
     }
+
+    addToOrder(item) {
+        this.setState({orders: [...this.state.orders, item]}, () => {
+            console.log(this.state.orders);
+            
+        })
+    }
+
 };
 
 export default Home;

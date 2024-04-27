@@ -1,11 +1,6 @@
 import React, {Component} from 'react';
 import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
 
-//функция добавления товара в корзину
-const buyProduct = (id) => {
-    console.log('купил товар с id:' , id);
-}
-
 class NewItems extends Component {
     render() {
         return (
@@ -20,7 +15,7 @@ class NewItems extends Component {
                         
                         {this.props.ArrProducts.slice(0,4).map(el => ( // вывод 4 товаров на страницу
 
-                                <div className="product" key={el.id}>
+                                <div className="product" key={el.id} onAdd={this.props.onAdd}>
                                     <div className="product__box-images">
                                     <Link to='/' className="product__link">
                                         <img src={el.imgProduct} className="product__images" alt="Изображение продукта"/>
@@ -48,7 +43,7 @@ class NewItems extends Component {
                                         <button className="product__star product__star_on" type="button"></button>
                                         <button className="product__star" type="button"></button>
                                     </div>
-                                    <button className="product__button-buy" type="button" onClick={() => buyProduct(el.id)}>В корзину</button>
+                                    <button className="product__button-buy" type="button" onClick={() => this.props.onAdd(this.props.ArrProducts)}>В корзину</button>
                                 </div>
                             
                                 ))}

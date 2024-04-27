@@ -64,7 +64,52 @@ let ArrProducts = [
         productNoCart:'90',
         productName: 'Колбаса «ДЕСНА-ПОЛЕСЬЕ 0.4 кг»',
         boxRating: 5
-    }
+    },
+    {
+        id: 7,
+        imgProduct: imgProdict7,
+        productSales:'-15%',
+        productPriceCart:'139,99',
+        productNoCart:'156,50',
+        productName: 'Сыр Dorbly 300гр.',
+        boxRating: 5
+    },
+    {
+        id: 8,
+        imgProduct: imgProdict8,
+        productSales:'-25%',
+        productPriceCart:'77,99',
+        productNoCart:'90',
+        productName: 'Молоко сгущенное РОГАЧЕВ Егорка, цельное с сахаром',
+        boxRating: 4
+    },
+    {
+        id: 9,
+        imgProduct: imgProdict9,
+        productSales:'-18%',
+        productPriceCart:'192,99',
+        productNoCart:'215',
+        productName: 'Масло сливочное 82% Простоквашино',
+        boxRating: 5
+    },
+    {
+        id: 10,
+        imgProduct: imgProdict10,
+        productSales:'-19%',
+        productPriceCart:'29,99',
+        productNoCart:'34',
+        productName: 'Йогурт Fruttis 70гр. Дыня',
+        boxRating: 5
+    },
+    {
+        id: 11,
+        imgProduct: imgProdict11,
+        productSales:'-19%',
+        productPriceCart:'29,99',
+        productNoCart:'34',
+        productName: 'Йогурт Fruttis 70гр. Ягода',
+        boxRating: 5
+    },    
 ];
 
 export default ArrProducts;

@@ -64,10 +64,10 @@ function Header(){
                     <Link to='/'>
                       <div className="header__img-logo"></div>
                     </Link>
-                    <div className="header__menu" ref={container}>
-                    <Link to='/catalog'>
-                      <div className="button__menu" onMouseOver={handleDropdownClick}>
-                          <span>Каталог</span>
+                    <div className="header__menu" ref={container} >
+                    <Link to='/catalog' onMouseOver={handleDropdownClick}>
+                      <div className="button__menu" >
+                          <span >Каталог</span >
                       </div>
                       </Link>
 
